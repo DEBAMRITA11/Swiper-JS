@@ -1,6 +1,14 @@
+ 
+
+/*google fonts*/  
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
 }
 .slider-area {
     margin:30px auto;
@@ -55,3 +63,76 @@
 .slider-area .swiper-button-disabled {
     display: none;
 }
+@media only screen and (max-width: 991px) {
+    .slider-area {
+        width: 100%;
+    }
+}
+/* review-slider-css*/
+    
+    .review-slider {
+     width: 800px;
+     margin: 30px auto;
+     padding: 100px;
+    }
+    .review-slider .swiper-wrapper {
+        padding-bottom: 70px;
+      }
+      .review-slider {
+        position:relative;
+      }
+      .review-slider .swiper-button-next, 
+      .review-slider .swiper-button-prev {
+        top: 93%;
+    }
+    .review-slider .swiper-scrollbar {
+        bottom: 25px; 
+    }
+    .review-slider .swiper-button-next, 
+    .review-slider .swiper-button-prev {
+        height: 40px;
+        width: 40px;
+        color: #333;
+        background-color: #fff;
+        border: 2px solid #333;
+        border-radius: 50%;
+        z-index: 99;
+    }
+    .review-slider .swiper-button-next:after, 
+    .review-slider .swiper-button-prev:after {
+        color: #333;
+        font-size: 16px;
+    }
+    .review-slider .swiper-button-disabled {
+        display: none;
+    }
+    .review-slide {
+        padding: 70px;
+        position: relative;
+    }
+    .review-slide::before {
+        position: absolute;
+        content: "\f10d";
+        height: 50px;
+        width: 50px;
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 40px;
+        left:0;
+        top:0; 
+    }
+    .review-slide h2 {
+        font-size: 36px;
+
+    }
+    .review-slide h4 {
+        font-size: 26px;
+        margin: 20px 0;
+        color:#999;
+        
+    }
+    .review-slide p {
+        font-size: 16px;
+        margin-top: 20px 0;
+        
+    }

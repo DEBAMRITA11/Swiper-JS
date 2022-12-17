@@ -9,6 +9,8 @@
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 />
+<!--font-awsome-->
+<link rel="stylesheet" href="all.min.css">
 <!--main css-->
     <link rel="stylesheet" href="style.css">
   </head>
@@ -16,7 +18,7 @@
     <div class="slider-area">
         <!-- Slider main container -->
         <!-- Swiper -->
-    <div class="swiper mySwiper">
+      <div class="swiper product-Swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="single-slide">
@@ -48,22 +50,60 @@
         <div class="swiper-scrollbar"></div>
       </div>
     </div>
+    <div class="review-slider">
+       <!-- Swiper -->
+      <div class="swiper review-Swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="review-slide">
+                <h2>Lorem, ipsum dolor.</h2>
+                <h4>Lorem, ipsum.</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga repellat eius cumque illo sit voluptatibus provident tempora. Ipsa, neque vel.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review-slide">
+                <h2>Lorem, ipsum dolor.</h2>
+                <h4>Lorem, ipsum.</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi corporis praesentium id fugit pariatur architecto facere amet reiciendis totam? Quidem?</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review-slide">
+                <h2>Lorem, ipsum dolor.</h2>
+                <h4>Lorem, ipsum.</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat dignissimos eos dolor repellendus id delectus aliquam facilis illo, quidem similique!</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="review-slide">
+                <h2>Lorem, ipsum dolor.</h2>
+                <h4>Lorem, ipsum.</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium at totam nostrum corrupti eos soluta sapiente aliquam quae mollitia. Temporibus.</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </div>
     <!--swiper js-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     
     <!--Initialize Swiper-->
     <script>
-        var swiper = new Swiper(".mySwiper", {
+        var swiper = new Swiper(".product-Swiper", {
           slidesPerView: 1,
           spaceBetween: 30,
           centeredSlides: false,
           slidesPerGroupSkip: 1,
           grabCursor: true,
           keyboard: {
-            enabled: true,
+          enabled: true,
           },
           breakpoints: {
-            769: {
+            991: {
               slidesPerView: 2,
               slidesPerGroup: 2,
             },
@@ -80,6 +120,37 @@
             clickable: true,
           },
         });
+        
+        
+        var swiper = new Swiper(".review-Swiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          centeredSlides: false,
+          slidesPerGroupSkip: 1,
+          grabCursor: true,
+          keyboard: {
+          enabled: true,
+          },
+          breakpoints: {
+            991: {
+              slidesPerView: 1,
+              slidesPerGroup: 2,
+            },
+          },
+          scrollbar: {
+            el: ".swiper-scrollbar",
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+        
+        
       </script>
   </body>
 </html>
